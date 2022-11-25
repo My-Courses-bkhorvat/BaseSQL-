@@ -66,6 +66,38 @@ SET bio = 'showman'
 WHERE name = 'Bogdan'
   AND id = 1;
 
+/*Lesson 3*/
+
+CREATE TABLE test
+(
+    id        INT NOT NULL,
+    someText  TEXT,
+    someField VARCHAR(36),
+    PRIMARY KEY (id)
+);
+
+INSERT INTO test(id, someText, someField)
+VALUES (1, 'Some text1', 'Some field'),
+       (2, 'Some text2', 'Some field'),
+       (3, 'Some text3', 'Some field'),
+       (4, 'Some text4', 'Some field'),
+       (5, 'Some text5', 'Some field'),
+       (6, 'Some text6', 'Some field');
+
+DELETE FROM test WHERE id = 2;
+DELETE FROM test;
+DELETE FROM test WHERE id > 0;
+
+TRUNCATE test;
+
+UPDATE test SET email = 'what@gmail.com' WHERE people.id = 3;
+
+DROP TABLE test;
+
+
+
+
+
 
 
 
